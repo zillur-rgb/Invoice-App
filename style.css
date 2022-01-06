@@ -1,0 +1,28 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  border-left: 4px solid blue;
+}
+.blue-color {
+  color: blue;
+}
+.half-width {
+  width: 50%;
+  padding-left: 5%;
+}
+.half-width img {
+  width: 80%;
+}
+.web-top {
+  display: flex;
+}
+.exp-button {
+  background-color: blue;
+  text-decoration: none;
+  padding: 10px 40px;
+  color: white;
+}
