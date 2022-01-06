@@ -25,6 +25,8 @@ h1 {
   text-decoration: none;
   padding: 10px 40px;
   color: white;
+  border: 1px blue;
+  border-radius: 10px;
 }
 #mission-22 {
   border-left: none;
@@ -69,4 +71,40 @@ h1 {
   border-radius: 20px;
   height: 30%;
   width: 25%;
+}
+.header {
+  border-left: none;
+}
+.web-mid-2 {
+  display: flex;
+  width: 70%;
+  margin-left: 10%;
+
+  background-size: 20rem;
+}
+.web-mid-2 img {
+  width: 80%;
+  height: 100%;
+  margin-right: 40px;
+}
+.web-bottom {
+  display: flex;
+  width: 70%;
+  margin-left: 8%;
+  padding-top: 200px;
+}
+.web-bottom img {
+  width: 80%;
+  height: 100%;
+  margin-left: 30%;
+}
+.footer {
+  text-align: center;
+  margin-top: 200px;
+  padding: 30px 50px;
+  background-color: blue;
+  color: white;
+}
+#year {
+  color: aqua;
 }
