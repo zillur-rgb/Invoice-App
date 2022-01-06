@@ -79,8 +79,10 @@ h1 {
   display: flex;
   width: 70%;
   margin-left: 10%;
-
-  background-size: 20rem;
+  background-image: url(images/shape-1.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: 20% 30%;
 }
 .web-mid-2 img {
   width: 80%;
@@ -92,6 +94,10 @@ h1 {
   width: 70%;
   margin-left: 8%;
   padding-top: 200px;
+  background-image: url(images/shape-1.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 50% 60%;
 }
 .web-bottom img {
   width: 80%;
