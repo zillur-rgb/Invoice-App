@@ -26,3 +26,47 @@ h1 {
   padding: 10px 40px;
   color: white;
 }
+#mission-22 {
+  border-left: none;
+  text-align: center;
+}
+.illus-img {
+  height: 40%;
+  width: 30%;
+}
+.web-mid {
+  display: flex;
+  margin: 50px;
+  justify-items: center;
+  margin-left: 8%;
+}
+.mission-1 {
+  background-color: lightblue;
+  text-align: center;
+  margin-right: 20px;
+  padding: 30px 30px;
+  border: 2px solid lightblue;
+  border-radius: 20px;
+  height: 30%;
+  width: 25%;
+}
+.vision-1 {
+  background-color: rgb(122, 216, 211);
+  text-align: center;
+  margin-right: 20px;
+  padding: 30px 30px;
+  border: 2px solid rgb(122, 216, 211);
+  border-radius: 20px;
+  height: 30%;
+  width: 25%;
+}
+.goals-1 {
+  background-color: rgb(147, 206, 206);
+  text-align: center;
+  margin-right: 20px;
+  padding: 30px 30px;
+  border: 2px solid rgb(147, 206, 206);
+  border-radius: 20px;
+  height: 30%;
+  width: 25%;
+}
