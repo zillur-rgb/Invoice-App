@@ -1,4 +1,24 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+const url = `mongodb+srv://zillurclub:12345@cluster0.bo37i.mongodb.net/invoiceDatabase?retryWrites=true&w=majority`;
+
+mongoose.connect(url);
+
+const invoiceSchema = new mongoose.Schema({
+  clientName: String,
+  clientEmail: String,
+  streetName: String,
+  city: String,
+  postcode: Number,
+  country: String,
+  projectDes: String,
+  price: Number,
+});
+
+const Invoice = mongoose.model("Note", invoiceSchema);
+
 const app = express();
 app.use(express.json());
 
