@@ -1,0 +1,13 @@
+POST http://localhost:3001/api/invoices
+Content-Type: application/json
+
+{
+    "clientName": "Cora Jade",
+    "clientEmail": "cora@wwe.com",
+    "streetName": "New York Street",
+    "city": "New York",
+    "postcode": 32113,
+    "country": "USA",
+    "projectDes": "Tattoo Generation",
+    "price": 250
+}

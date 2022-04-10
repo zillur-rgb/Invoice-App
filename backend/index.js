@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-const invoices = [
+let invoices = [
   {
     id: 1,
     clientName: "Andrew Mark",
@@ -38,11 +38,11 @@ const invoices = [
   },
 ];
 
-app.get("/api/invoice", (req, res) => {
+app.get("/api/invoices", (req, res) => {
   res.json(invoices);
 });
 
-app.get("/api/invoice/:id", (req, res) => {
+app.get("/api/invoices/:id", (req, res) => {
   const id = Number(req.params.id);
   const singleData = invoices.find((d) => d.id === id);
 
@@ -53,23 +53,24 @@ app.get("/api/invoice/:id", (req, res) => {
   }
 });
 
-app.delete("/api/invoice/:id", (req, res) => {
+app.delete("/api/invoices/:id", (req, res) => {
   const id = Number(req.params.id);
-  invoices = invoices.filter((invoice) => d.id !== id);
+  invoices = invoices.filter((invoice) => invoice.id !== id);
   res.status(204).end();
 });
 
-const generateId = () => {
-  const maxId =
-    invoices.length > 0
-      ? Math.max(...invoices.map((invoice) => invoice.id))
-      : 0;
-};
-
 app.post("/api/invoices", (req, res) => {
+  const generateId = () => {
+    const maxId =
+      invoices.length > 0
+        ? Math.max(...invoices.map((invoice) => invoice.id))
+        : 0;
+
+    return maxId + 1;
+  };
   const body = req.body;
 
-  if (!body.content) {
+  if (!body) {
     return res.status(400).json({
       error: "Content Missing",
     });
@@ -77,8 +78,8 @@ app.post("/api/invoices", (req, res) => {
 
   const newInvoice = {
     id: generateId(),
-    clientName: body.name,
-    clientEmail: body.email,
+    clientName: body.clientName,
+    clientEmail: body.clientEmail,
     streetName: body.streetName,
     city: body.city,
     postcode: body.postcode,
@@ -87,8 +88,8 @@ app.post("/api/invoices", (req, res) => {
     price: body.price,
   };
 
-  invoices.concat(newInvoice);
-  res.json(invoices);
+  invoices = invoices.concat(newInvoice);
+  res.json(newInvoice);
 });
 
 const PORT = 3001;
