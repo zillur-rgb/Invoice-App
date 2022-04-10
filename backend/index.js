@@ -1,24 +1,6 @@
+const dotenv = require("dotenv").config();
+const Invoice = require("./models/invoice");
 const express = require("express");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-
-const url = `mongodb+srv://zillurclub:12345@cluster0.bo37i.mongodb.net/invoiceDatabase?retryWrites=true&w=majority`;
-
-mongoose.connect(url);
-
-const invoiceSchema = new mongoose.Schema({
-  clientName: String,
-  clientEmail: String,
-  streetName: String,
-  city: String,
-  postcode: Number,
-  country: String,
-  projectDes: String,
-  price: Number,
-});
-
-const Invoice = mongoose.model("Note", invoiceSchema);
-
 const app = express();
 app.use(express.json());
 
@@ -112,7 +94,7 @@ app.post("/api/invoices", (req, res) => {
   res.json(newInvoice);
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
