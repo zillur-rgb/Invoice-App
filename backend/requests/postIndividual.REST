@@ -4,10 +4,10 @@ Content-Type: application/json
 {
     "clientName": "Cora Jade",
     "clientEmail": "cora@wwe.com",
-    "streetName": "New York Street",
-    "city": "New York",
-    "postcode": 32113,
+    "streetName": "Washington Street",
+    "city": "New Orleans",
+    "postcode": 40022,
     "country": "USA",
-    "projectDes": "Tattoo Generation",
-    "price": 250
+    "projectDes": "Tattoo Design",
+    "price": 500
 }

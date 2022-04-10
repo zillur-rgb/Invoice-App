@@ -1,0 +1,13 @@
+PUT http://localhost:3001/api/invoices/6252e35d331183ccb56b35f9
+Content-Type: application/json
+
+{
+    "clientName": "Cora Money",
+    "clientEmail": "cora@wwe.com",
+    "streetName": "Albert Street",
+    "city": "Washington",
+    "postcode": 32113,
+    "country": "USA",
+    "projectDes": "Tattoo Generation",
+    "price": 250
+}
