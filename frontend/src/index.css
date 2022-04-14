@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.sidebar {
+  display: block;
+  background-color: #3a5a40;
+  width: 100px;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: #b8e994;
+  position: absolute;
+  top: 150px;
+  right: 0;
+  padding-top: 60px;
+  transform: rotate(-90deg);
+  flex-direction: column;
+  white-space: nowrap;
+}
