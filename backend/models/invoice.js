@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
 
 const url = process.env.MONGODB_URI;
 
@@ -16,6 +17,9 @@ const invoiceSchema = new mongoose.Schema({
   country: String,
   projectDes: String,
   price: Number,
+  status: String,
+  date: Date,
+  due: Date,
 });
 
 invoiceSchema.set("toJSON", {

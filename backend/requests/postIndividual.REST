@@ -2,12 +2,12 @@ POST http://localhost:3001/api/invoices
 Content-Type: application/json
 
 {
-    "clientName": "Cora Jade",
-    "clientEmail": "cora@wwe.com",
-    "streetName": "Washington Street",
-    "city": "New Orleans",
-    "postcode": 40022,
+    "clientName": "Randi Orton",
+    "clientEmail": "randiRKhai@wwe.com",
+    "streetName": "Sim City",
+    "city": "California",
+    "postcode": 32010,
     "country": "USA",
-    "projectDes": "Tattoo Design",
-    "price": 500
+    "projectDes": "Broserweight",
+    "price": 1250
 }
