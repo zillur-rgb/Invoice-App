@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import GetDetails from "./GetDetails";
 import Homepage from "./Homepage";
 
 const Pages = () => {
@@ -7,6 +8,7 @@ const Pages = () => {
     <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/:invoiceId" element={<GetDetails />} />
       </Routes>
     </div>
   );

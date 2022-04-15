@@ -11,6 +11,7 @@
 .app {
   height: 100vh;
   display: flex;
+  background-color: #f0f0f0;
 }
 
 .sidebar {
@@ -33,4 +34,48 @@
   transform: rotate(-90deg);
   flex-direction: column;
   white-space: nowrap;
+}
+
+.content {
+  width: 60vw;
+  margin: 80px 25%;
+}
+
+.content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content header .title h1 {
+  font-family: "Montserrat";
+  color: #3a5a40;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.content header .title p {
+  font-size: 18px;
+  font-family: "Open Sana", sans-serif;
+  color: #588157;
+}
+
+.content header button {
+  padding: 17px 36px;
+  background-color: #b8e994;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content header button:hover {
+  background-color: #b2f185;
+  transition: all 0.1s linear;
+}
+
+.content header button p {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 700;
 }
