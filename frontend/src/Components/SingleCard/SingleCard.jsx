@@ -1,6 +1,7 @@
 import React from "react";
 import "./SingleCard.css";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const SingleCard = ({ invoice }) => {
   console.log(invoice);
@@ -12,9 +13,24 @@ const SingleCard = ({ invoice }) => {
       <p className="dueDate">Due {invoice.due ? invoice.due : "12/12/2022"}</p>
       <p className="client">{invoice.clientName}</p>
       <p className="price">{invoice.price}</p>
-      <button className="arrow">
-        <MdKeyboardArrowRight />
-      </button>
+      <div className="status">
+        <p
+          className={
+            invoice.status === "Expired"
+              ? "expired"
+              : invoice.status === "Pending"
+              ? "pending"
+              : "paid"
+          }
+        >
+          {invoice.status}
+        </p>
+      </div>
+      <Link to={`/${invoice.id}`}>
+        <button className="arrow">
+          <MdKeyboardArrowRight />
+        </button>
+      </Link>
     </div>
   );
 };
