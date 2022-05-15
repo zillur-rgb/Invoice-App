@@ -33,9 +33,13 @@ invoiceRouter.post("/api/invoices", (req, res) => {
 
   console.log(body);
   const date = new Date();
-  const dueDate = date.setMonth(date.getMonth() + 1);
+  const day = date.getUTCDate();
+  const month = date.getUTCMonth() + 1;
+  const year = date.getUTCFullYear();
+  const newDate = year + "-" + month + "-" + day;
+
   const status =
-    dueDate < new Date()
+    body.due < newDate
       ? "Expired"
       : date === new Date()
       ? "Paid"
@@ -53,8 +57,8 @@ invoiceRouter.post("/api/invoices", (req, res) => {
     projectDes: body.projectDes,
     price: body.price,
     status: body.status ? body.status : status,
-    date: new Date(),
-    due: date,
+    date: newDate,
+    due: body.due,
   });
 
   newInvoice.save().then((savedNote) => res.json(savedNote));

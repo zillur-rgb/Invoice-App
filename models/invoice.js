@@ -18,8 +18,8 @@ const invoiceSchema = new mongoose.Schema({
   projectDes: String,
   price: Number,
   status: String,
-  date: Date,
-  due: Date,
+  date: String,
+  due: String,
 });
 
 invoiceSchema.set("toJSON", {

@@ -1,13 +1,14 @@
-POST http://localhost:3001/api/invoices
+POST http://localhost:5000/api/invoices
 Content-Type: application/json
 
 {
-    "clientName": "Randi Orton",
-    "clientEmail": "randiRKhai@wwe.com",
-    "streetName": "Sim City",
-    "city": "California",
-    "postcode": 32010,
+    "clientName": "Riddle",
+    "clientEmail": "riddle@wwe.com",
+    "streetName": "Sin City",
+    "city": "Ontario",
+    "postcode": 11224,
     "country": "USA",
-    "projectDes": "Broserweight",
-    "price": 1250
+    "projectDes": "Powerpoint Template",
+    "price": 350,
+    "due": "2022-04-10"
 }

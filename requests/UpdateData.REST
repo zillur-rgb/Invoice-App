@@ -1,13 +1,6 @@
-PUT http://localhost:3001/api/invoices/625972370eac68d2e779e444
+PUT http://localhost:5000/api/invoices/625972370eac68d2e779e444
 Content-Type: application/json
 
 {
-    "clientName": "Aliah Bhatt",
-    "clientEmail": "aliah@bollywood.com",
-    "streetName": "Jamtola Road",
-    "city": "Mumbai",
-    "postcode": 4110,
-    "country": "India",
-    "projectDes": "Poster Design",
-    "price": 1550
+    "status": "Paid"
 }
