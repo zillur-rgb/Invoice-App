@@ -1,6 +1,6 @@
-PUT http://localhost:5000/api/invoices/625972370eac68d2e779e444
+PUT http://localhost:5000/api/invoices/6280db6f0584cdd401b3c546
 Content-Type: application/json
 
 {
-    "status": "Paid"
+    "status": "Expired"
 }
