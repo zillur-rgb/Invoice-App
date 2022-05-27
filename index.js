@@ -1,4 +1,3 @@
-const Invoice = require("./models/invoice");
 const cors = require("cors");
 const express = require("express");
 const app = express();

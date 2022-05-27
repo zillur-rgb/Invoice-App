@@ -16,6 +16,7 @@ const invoiceSchema = new mongoose.Schema({
   postcode: Number,
   country: String,
   projectDes: String,
+  ownerEmail: String,
   price: Number,
   status: String,
   date: String,

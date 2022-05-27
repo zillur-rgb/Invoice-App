@@ -13,6 +13,14 @@ invoiceRouter.get("/api/invoices/:id", (req, res) => {
   Invoice.findById(req.params.id).then((invoice) => res.json(invoice));
 });
 
+// Get data using email
+invoiceRouter.get("/api/userinvoices/:email", async (req, res) => {
+  const email = req.params.email;
+  await Invoice.find({ ownerEmail: email }).then((invoice) =>
+    res.json(invoice)
+  );
+});
+
 //Delete Single Data
 
 invoiceRouter.delete("/api/invoices/:id", (req, res) => {
@@ -59,6 +67,7 @@ invoiceRouter.post("/api/invoices", (req, res) => {
     status: body.status ? body.status : status,
     date: body.date,
     due: body.due,
+    ownerEmail: body.ownerEmail,
   });
 
   newInvoice.save().then((savedNote) => res.json(savedNote));
@@ -78,6 +87,7 @@ invoiceRouter.put("/api/invoices/:id", (req, res) => {
     country: body.country,
     projectDes: body.projectDes,
     price: body.price,
+    ownerEmail: body.ownerEmail,
     status: body.status,
     date: body.date,
     due: body.due,
