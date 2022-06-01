@@ -6,7 +6,11 @@ app.use(express.json());
 app.use(cors());
 app.use(invoiceRouter);
 
-const PORT = process.env.PORT;
+// Home data
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome welcome</h1>");
+});
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
