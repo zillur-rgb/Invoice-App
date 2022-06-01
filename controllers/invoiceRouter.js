@@ -1,6 +1,12 @@
 const invoiceRouter = require("express").Router();
 
+const { append } = require("express/lib/response");
 const Invoice = require("../models/invoice");
+
+// Home data
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome welcome</h1>");
+});
 
 //Get All Data
 invoiceRouter.get("/api/invoices", (req, res) => {
